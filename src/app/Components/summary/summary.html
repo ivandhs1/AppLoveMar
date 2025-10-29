@@ -1,0 +1,73 @@
+<div class="summary-card">
+  <h2>💞 Resumen del juego 💞</h2>
+
+  <div *ngFor="let result of formattedResults; let i = index" class="question-block">
+    <p class="question">
+      {{ i + 1 }}. {{ result.question }}
+    </p>
+    <div class="times">
+        <p *ngIf="result.times.playerTimes[game.players[0].name]">
+        🧡 {{ game.players[0].name }}: 
+        {{ (result.times.playerTimes[game.players[0].name] / 1000).toFixed(2) }} s
+        </p>
+
+        <p *ngIf="result.times.playerTimes[game.players[1].name]">
+        💙 {{ game.players[1].name }}:
+        {{ (result.times.playerTimes[game.players[1].name] / 1000).toFixed(2) }} s
+        </p>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="totals">
+    <p><strong>🧡 {{ game.players[0].name }} total:</strong> {{ (totalTimePlayer1 / 1000).toFixed(2) }} s</p>
+    <p><strong>💙 {{ game.players[1].name }} total:</strong> {{ (totalTimePlayer2 / 1000).toFixed(2) }} s</p>
+  </div>
+
+  <button class="restart-btn" (click)="restartGame()">Jugar de nuevo</button>
+</div>
+
+
+<div class="summary-container">
+  <h2>💌 Resumen del juego</h2>
+  <p>Ganó: {{ winnerName }}</p>
+  <p>Tiempo promedio: {{ averageTime }} s</p>
+
+  <button class="btn-message" (click)="openMessage()">Ver mensaje 💖</button>
+</div>
+
+<!-- 🌸 Modal romántico -->
+<div class="modal-backdrop" *ngIf="showModal">
+  <div class="modal-content">
+    <h2>💞 Para ti 💞</h2>
+    <p>💌 Mensaje para mi Pollita – 11/10/2025
+
+      Mi pollita hermosa, mi niña, mi reina, mi amor 💖br><br>
+
+      Sé que a veces hemos tenido discusiones, malentendidos o momentos en los que las palabras no salieron como queríamos. 
+      Pero quiero que sepas, desde lo más profundo de mi corazón, que nada de eso cambia lo que siento por ti.<br><br>
+
+      Te amo con todo lo que soy. Cada día pienso en ti, en tus risas, en tu forma de ver el mundo, 
+      en lo increíble que eres. Y aunque a veces no lo parezca, siempre busco la manera de acercarme a ti, 
+      de entenderte más, de cuidarte mejor.<br><br>
+
+      Hice este pequeño software con todo mi cariño, no solo como un detalle, sino como una forma de seguir 
+      construyendo puentes entre nosotros. Para que tengamos una manera más linda y especial de comunicarnos, 
+      sin importar si estamos lejos o cerca.<br><br>
+
+      Porque tú eres mi motivo, mi inspiración y mi razón para seguir creando cosas bonitas. 💞<br>
+
+      Con todo mi amor,<br>
+      Tu niño, el que siempre te va a amar 💕<br>
+      11/10/2025 💍
+    </p>
+
+<audio id="romanticAudio" controls>
+  <source src="assets/music/SebastianYatraCristina.mp3" type="audio/mpeg" />
+  Tu navegador no soporta audio.
+</audio>
+
+    <button class="close-btn" (click)="closeMessage()">Cerrar ✨</button>
+  </div>
+</div>

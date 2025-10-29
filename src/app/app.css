@@ -1,0 +1,6 @@
+.container {
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    padding: 2rem;
+    background: linear-gradient(180deg, #fff 0%, #fff7fb 100%);
+    min-height: 100vh;
+}

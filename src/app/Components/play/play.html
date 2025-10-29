@@ -1,0 +1,38 @@
+<div class="play-card">
+  <h2>Pregunta {{ game.currentQuestion + 1 }} de {{ game.questions.length }}</h2>
+  <p class="question">{{ game.questions[game.currentQuestion] }}</p>
+
+  <p><strong>Turno:</strong> {{ game.players[currentPlayerIdx].name }}</p>
+
+  <div class="timer" *ngIf="isTiming">
+    ⏱️ {{ elapsedSeconds }} s
+  </div>
+
+  <div class="controls">
+    <button 
+      (click)="startTimer()" 
+      [disabled]="isTiming || bothAnswered">
+      Comenzar respuesta
+    </button>
+
+    <button 
+      (click)="stopTimer()" 
+      [disabled]="!isTiming || bothAnswered">
+      Terminar
+    </button>
+  </div>
+
+  <p *ngIf="lastTime">
+    ⏳ Tiempo de {{ game.players[currentPlayerIdx].name }}:
+    {{ (lastTime / 1000).toFixed(2) }} s
+  </p>
+
+  <button
+    class="next-btn"
+    (click)="nextQuestion()"
+    [disabled]="!bothAnswered">
+    Siguiente pregunta
+  </button>
+
+  <p class="hint">Cuando ambos hayan terminado, pasa a la siguiente pregunta 💞</p>
+</div>

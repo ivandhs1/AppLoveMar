@@ -1,0 +1,31 @@
+<div class="card">
+    <h1 style="color: rgb(212, 62, 87);">Juego para parejas</h1>
+    <p>Fortalece la comunicación escuchando con atención. No se guardan respuestas.</p>
+
+
+    <div class="row">
+        <div class="col">
+        <label>Jugador 1</label>
+        <input [(ngModel)]="game.players[0].name" placeholder="Nombre 1" />
+        <label>Número (1-10)</label>
+        <input type="number" min="1" max="10" [(ngModel)]="game.players[0].numberPick" />
+    </div>
+
+
+    <div class="col">
+        <label>Jugador 2</label>
+        <input [(ngModel)]="game.players[1].name" placeholder="Nombre 2" />
+        <label>Número (1-10)</label>
+        <input type="number" min="1" max="10" [(ngModel)]="game.players[1].numberPick" />
+        </div>
+    </div>
+
+
+    <div class="rule">
+        <p *ngIf="game.rule === 'menor'">🎲 Empieza quien eligió el número menor</p>
+        <p *ngIf="game.rule === 'mayor'">🎲 Empieza quien eligió el número mayor</p>
+    </div>
+
+
+    <button (click)="start()">Comenzar</button>
+</div>
