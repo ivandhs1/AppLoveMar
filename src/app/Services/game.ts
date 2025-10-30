@@ -14,16 +14,21 @@ export class GameService {
   times: TimeRecord[] = [];
 
   readonly questions: string[] = [
-    '¿Algo que no te gusta de mí? (habla con cariño)',
-    '¿Algo que te ha molestado de mí?',
-    '¿Qué fue lo que más te enamoró de mí después de conocerme?',
-    'Un recuerdo mío que siempre te hace sonreír',
-    'Algo que te gustaría que hiciéramos más juntos',
-    'Una forma en que te gusta que te muestre cariño',
-    'Una promesa pequeña que te gustaría que cumpliera',
-    '¿Qué detalle mío valoras y pocas veces digo que me importa?',
-    'Algo que quisieras que supiera sobre tus sueños',
-    '¿Cómo te sientes cuando estamos lejos?'
+  "¿Qué fue lo primero que te enamoró de mí?",
+  "Si pudieras cambiarme algo (sin ofender 😅), ¿qué sería?",
+  "¿Qué detalle pequeño mío te derrite el corazón?",
+  "¿Qué cosa mía te ha molestado pero nunca me dijiste?",
+  "¿Qué sueño o meta te gustaría que logremos juntos?",
+  "¿Qué canción sientes que nos representa?",
+  "¿Cuál es tu apodo favorito que te he dicho (o te gustaría que te diga)?",
+  "Si tuvieras que describir nuestro amor con una sola palabra, ¿cuál sería y por qué?",
+  "¿Qué cosa tonta hemos hecho juntos que siempre te hace reír al recordarla?",
+  "Si pudieras revivir un momento conmigo, ¿cuál elegirías?",
+  "¿Qué cosa hago que te hace sentir más amado(a)?",
+  "¿Qué parte de mí (física o emocional) te encanta más?",
+  "¿Qué aprendiste de nuestra relación que antes no sabías sobre el amor?",
+  "¿Qué te gustaría que hiciéramos más seguido para mejorar nuestra conexión?",
+  "Si pudieras decirme una sola cosa que venga directo del corazón ahora mismo, ¿qué sería?"
   ];
 
   // 🔹 Decide quién empieza según la regla o al azar si empatan
