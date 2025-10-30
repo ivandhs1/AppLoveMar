@@ -14,21 +14,21 @@ export class GameService {
   times: TimeRecord[] = [];
 
   readonly questions: string[] = [
-  "¿Qué fue lo primero que te enamoró de mí?",
-  "Si pudieras cambiarme algo (sin ofender 😅), ¿qué sería?",
-  "¿Qué detalle pequeño mío te derrite el corazón?",
-  "¿Qué cosa mía te ha molestado pero nunca me dijiste?",
-  "¿Qué sueño o meta te gustaría que logremos juntos?",
-  "¿Qué canción sientes que nos representa?",
-  "¿Cuál es tu apodo favorito que te he dicho (o te gustaría que te diga)?",
-  "Si tuvieras que describir nuestro amor con una sola palabra, ¿cuál sería y por qué?",
-  "¿Qué cosa tonta hemos hecho juntos que siempre te hace reír al recordarla?",
-  "Si pudieras revivir un momento conmigo, ¿cuál elegirías?",
-  "¿Qué cosa hago que te hace sentir más amado(a)?",
-  "¿Qué parte de mí (física o emocional) te encanta más?",
-  "¿Qué aprendiste de nuestra relación que antes no sabías sobre el amor?",
-  "¿Qué te gustaría que hiciéramos más seguido para mejorar nuestra conexión?",
-  "Si pudieras decirme una sola cosa que venga directo del corazón ahora mismo, ¿qué sería?"
+  "Si fueras una aplicación en mi celular, ¿cuál serías y por qué? 📱😂",
+  "¿Qué cosa haces que sabes que me desespera… pero igual lo sigues haciendo? 😅",
+  "Si tuvieras que describir nuestra relación como una película, ¿cuál sería? 🎬",
+  "¿Qué emoji me representa mejor según tú? 🤔",
+  "Si fuéramos un dúo famoso, ¿cómo se llamaría nuestro equipo? 🌟",
+  "¿Qué apodo divertido me pondrías si no te enojaras por el mío? 😜",
+  "¿Qué harías si mañana amanecemos intercambiando cuerpos por un día? 🤯",
+  "¿Qué meme describe mejor cómo te sientes conmigo? 😂",
+  "Si fuéramos personajes de caricatura, ¿quién serías tú y quién sería yo? 🧸",
+  "¿Cuál fue la cita más rara o graciosa que hemos tenido? 💞",
+  "Si te doy un súper poder solo para usar conmigo, ¿cuál eliges? ⚡",
+  "¿Qué harías si te digo que quiero bailar contigo ahora mismo, sin música? 💃🕺",
+  "¿Qué frase tuya me haría reír incluso en un mal día? 🤭",
+  "Si tuvieras que imitarme, ¿qué frase o gesto harías primero? 😆",
+  "¿Qué travesura te gustaría que hiciéramos juntos sin que nadie se entere? 🤫"
   ];
 
   // 🔹 Decide quién empieza según la regla o al azar si empatan
